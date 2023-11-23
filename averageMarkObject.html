@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Marks Calculation</title>
+</head>
+<body>
+
+    <script>
+        var student = {
+            name: "Rafsan Khan",
+            age: 34,
+            address: "House 432, Banani, Rd-11",
+            marks: [40, 33, 80, 93, 12, 46]
+        };
+
+        var marksSum = 0;
+
+        for (var i = 0; i < student.marks.length; i++) {
+            marksSum += student.marks[i];
+        }
+
+        var averageMarks = marksSum / student.marks.length;
+
+        document.write("Average Marks: " + averageMarks.toFixed(2));
+    </script>
+
+</body>
+</html>

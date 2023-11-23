@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Greater Than 600</title>
+</head>
+<body>
+
+    <script>
+        var numbers = [434, 545, 231, 7675, 543, 678];
+        var count = 0;
+
+        for (var i = 0; i < numbers.length; i++) {
+            if (numbers[i] > 600) {
+                count++;
+            }
+        }
+
+        document.write("Total numbers greater than 600: " + count);
+    </script>
+
+</body>
+</html>

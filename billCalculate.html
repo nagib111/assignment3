@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+
+    <label for="electricityUnits">Enter Total Units of Electricity Usage:</label>
+    <input type="number" id="electricityUnits" placeholder="Enter units">
+
+    <button onclick="calculateBill()">Calculate</button>
+
+    <script>
+        function calculateBill() {
+            var electricityUnitsInput = document.getElementById("electricityUnits");
+            var electricityUnits = parseFloat(electricityUnitsInput.value);
+
+            var bill = 0;
+
+            if (electricityUnits <= 50) {
+                bill = electricityUnits * 0.50;
+            } else if (electricityUnits > 50 && electricityUnits <= 150) {
+                bill = 50 * 0.50 + (electricityUnits - 50) * 0.75;
+            } else if (electricityUnits > 150 && electricityUnits <= 250) {
+                bill = 50 * 0.50 + 100 * 0.75 + (electricityUnits - 150) * 1.20;
+            } else {
+                bill = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (electricityUnits - 250) * 1.50;
+            }
+
+            // Add a surcharge of 20%
+            var surcharge = bill * 0.20;
+            var totalBill = bill + surcharge;
+            document.write("Total Electricity Bill: Taka. " + totalBill.toFixed(2));
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculation</title>
+</head>
+<body>
+
+    <script>
+        var sum = 0;
+        var count = 0;
+
+        for (var i = 500; i <= 565; i++) {
+            if (i % 2 === 0) {
+                sum += i;
+                count++;
+            }
+        }
+
+        var average = sum / count;
+
+        document.write("Average of even numbers between 500 and 565: " + average.toFixed(2));
+    </script>
+
+</body>
+</html>

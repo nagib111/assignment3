@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculation</title>
+</head>
+<body>
+
+    <script>
+        var numbers = [43, 654, 34, 60, 532, 46, 300];
+        var sum = 0;
+
+        for (var i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        var average = sum / numbers.length;
+
+        document.write("Average of numbers: " + average.toFixed(2));
+    </script>
+
+</body>
+</html>

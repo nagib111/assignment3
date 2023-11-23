@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gross Salary Calculator</title>
+</head>
+<body>
+
+    <label for="basicSalary">Enter Basic Salary of the Employee:</label>
+    <input type="number" id="basicSalary" placeholder="Enter salary">
+
+    <button onclick="calculateGrossSalary()">Calculate</button>
+
+    <script>
+        function calculateGrossSalary() {
+            var basicSalaryInput = document.getElementById("basicSalary");
+            var basicSalary = parseFloat(basicSalaryInput.value);
+
+            var hra, da;
+
+            if (basicSalary <= 10000) {
+                hra = 0.20 * basicSalary;
+                da = 0.80 * basicSalary;
+            } else if (basicSalary <= 20000) {
+                hra = 0.25 * basicSalary;
+                da = 0.90 * basicSalary;
+            } else {
+                hra = 0.30 * basicSalary;
+                da = 0.95 * basicSalary;
+            }
+
+            var grossSalary = basicSalary + hra + da;
+
+            document.write("Gross Salary: Taka. " + grossSalary.toFixed(2));
+        }
+    </script>
+
+</body>
+</html>
